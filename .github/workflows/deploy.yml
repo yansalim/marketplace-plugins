@@ -26,7 +26,6 @@ jobs:
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v4
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
