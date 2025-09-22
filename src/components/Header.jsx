@@ -1,9 +1,8 @@
 ﻿import { Link, NavLink } from 'react-router-dom';
-import logo from '../assets/sistema-gil-logo.svg';
 import { useCart } from '../store/cartContext.jsx';
 import { CartIcon } from './CartIcon.jsx';
 
-// Header fixo utilizando a identidade visual do parceiro.
+// Header fixo com navegação principal.
 
 const activeClasses = 'text-brand-700 font-semibold';
 const baseLink = 'text-sm font-medium text-slate-600 transition hover:text-brand-700';
@@ -15,8 +14,8 @@ export const Header = () => {
   return (
     <header className="sticky top-0 z-40 border-b border-brand-100 bg-white/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-        <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="Sistema GIL" className="h-10 w-auto" />
+        <Link to="/" className="flex items-center gap-3 text-lg font-semibold text-slate-900">
+          Marketplace
         </Link>
         <nav className="hidden items-center gap-5 md:flex">
           <NavLink to="/" className={({ isActive }) => `${baseLink} ${isActive ? activeClasses : ''}`}>
